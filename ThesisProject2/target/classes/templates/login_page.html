@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Preview</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      html, body {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        width: 100%;
+        height: 100%;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+    </style>
+</head>
+<body>
+<div
+        style="width: 1920px; height: 1080px; position: relative; overflow: hidden; background: #b6efec;"
+>
+    <div
+            style="width: 1920px; height: 855px; position: absolute; left: -1px; top: -1px; background: #f6f5f3;"
+    ></div>
+    <div style="width: 103px; height: 30px; position: absolute; left: 72px; top: 26px;">
+        <p
+                style="position: absolute; left: 0px; top: 0px; font-size: 24px; font-weight: 700; text-align: left; text-transform: uppercase; color: #18181b;"
+        >
+            <a href="/">SENTIE</a>
+        </p>
+    </div>
+    <div style="width: 189px; height: 24px;">
+        <div style="width: 68px; height: 24px; position: absolute; left: 865px; top: 29px;">
+            <p
+                    style="position: absolute; left: 0px; top: 0px; font-size: 16px; font-weight: 500; text-align: left; color: #18181b;"
+            >
+                Features
+            </p>
+        </div>
+        <div style="width: 70px; height: 24px; position: absolute; left: 984px; top: 29px;">
+            <p
+                    style="position: absolute; left: 0px; top: 0px; font-size: 16px; font-weight: 500; text-align: left; color: #18181b;"
+            >
+                About Us
+            </p>
+        </div>
+    </div>
+    <form method="POST" action="/analyze" th:object="${loginRequest}">
+        <div style="width: 114px; height: 45px; position: absolute; left: 903px; top: 587px;">
+            <div style="width: 114px; height: 45px; position: absolute; left: 0px; top: 0px;">
+                <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; width: 114px; height: 45px; position: absolute; left: 0px; top: 0px; gap: 10px; padding: 16px; border-radius: 10px; background: #b6efec;">
+                    <div style="display: flex; justify-content: center; align-items: center; flex-grow: 0; flex-shrink: 0; position: relative; gap: 9px;">
+                        <p style="flex-grow: 0; flex-shrink: 0; font-size: 18px; font-weight: 700; text-align: right; color: #7e7e7e;">
+<!--                            <button style="width: 120px; height: 50px" type="submit" value="Login">Login</button>-->
+                            <input style="cursor: pointer; padding: 9px 32px" type="submit" name="login" value="Login">
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="width: 458px; height: 278px;">
+            <div style="width: 458px; height: 278px;">
+                <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; width: 458px; height: 278px; position: absolute; left: 731px; top: 288px; gap: 10px; padding: 16px; border-radius: 10px; background: #bcd2d1;">
+                    <div style="display: flex; justify-content: center; align-items: center; flex-grow: 0; flex-shrink: 0; width: 125px; height: 24px; gap: 9px;"></div>
+                </div>
+            </div>
+
+            <div style="width: 370px; height: 60px; position: absolute; left: 775px; top: 348px;">
+                <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; width: 370px; height: 60px; position: absolute; left: 0px; top: 0px; gap: 10px; padding: 16px; border-radius: 10px; background: #fff;">
+                    <input style="width: 350px; padding: 10px; line-height: 30px; outline: none" type="text" name="username" placeholder="Username" required>
+                </div>
+            </div>
+            <div style="width: 370px; height: 60px;">
+                <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; width: 370px; height: 60px; position: absolute; left: 775px; top: 446px; gap: 10px; padding: 16px; border-radius: 10px; background: #fff;">
+                    <input style="width: 350px; padding: 10px; line-height: 30px; outline: none" type="password" name="password" placeholder="Password" required>
+                </div>
+            </div>
+    </form>
+</div>
+<div style="display: flex; flex-direction: column; justify-content: flex-start; align-items: flex-start; position: absolute; left: 1744px; top: 26px;">
+    <div style="display: flex; flex-direction: column; justify-content: flex-start; align-items: flex-end; flex-grow: 0; flex-shrink: 0; height: 45px; width: 114px;">
+        <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; flex-grow: 0; flex-shrink: 0; height: 45px; width: 114px; gap: 10px; padding: 16px; border-radius: 10px; background: #000;">
+            <div style="display: flex; justify-content: center; align-items: center; flex-grow: 0; flex-shrink: 0; position: relative; gap: 9px;">
+                <a href="/register"
+                   style="padding: 10px 24px;  flex-grow: 0; flex-shrink: 0; font-size: 18px; font-weight: 700; text-align: center; color: #b6efec;">
+                    Sign up
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</body>
+</html>

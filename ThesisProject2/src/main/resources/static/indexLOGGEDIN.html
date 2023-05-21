@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Preview</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+      html, body {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        width: 100%;
+        height: 100%;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+
+    </style>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script th:src="@{/sentimentAnalysisDirectToResult.js}" type="text/javascript"></script>
+  <script th:src="@{/clear.js}" type="text/javascript"></script>
+  <script th:src="@{/uploadFile.js}" type="text/javascript"></script>
+</head>
+<body>
+<div
+        style="width: 1920px; height: 1080px; position: relative; overflow: hidden; background: #b6efec;"
+>
+  <div
+          style="width: 1920px; height: 855px; position: absolute; left: -1px; top: -1px; background: #f6f5f3;"
+  ></div>
+  <p
+          style="width: 533px; position: absolute; left: 693px; top: 152px; font-size: 18px; text-align: center; color: #52525b;"
+  >
+    An AI tool made for conversion rate optimization
+  </p>
+  <div
+          style="display: flex; flex-direction: column; justify-content: flex-start; align-items: center; width: 836px; position: absolute; left: 541.33px; top: 204px; gap: 32px;"
+  >
+    <p
+            style="align-self: stretch; flex-grow: 0; flex-shrink: 0; width: 836px; font-size: 52px; font-weight: 700; text-align: center;"
+    >
+          <span
+                  style="align-self: stretch; flex-grow: 0; flex-shrink: 0; width: 836px; font-size: 52px; font-weight: 700; text-align: center; color: #18181b;"
+          >Increase your conversion rate </span
+          ><span
+            style="align-self: stretch; flex-grow: 0; flex-shrink: 0; width: 836px; font-size: 52px; font-weight: 700; text-align: center;"
+    >using AI</span
+    >
+    </p>
+  </div>
+  <div style="width: 1173.33px; height: 541px; position: absolute; left: 372px; top: 515px;">
+    <div style="width: 1173.33px; height: 541px;">
+      <div
+              style="width: 1109.33px; height: 473px; position: absolute; left: 1131.5px; top: 67.5px; opacity: 0.95;"
+      ></div>
+      <div style="width: 1173.33px; height: 526px;">
+        <div
+                style="width: 1173.33px; height: 526px; position: absolute; left: -0.5px; top: -0.5px; border-radius: 10px; background: #8cbab7; box-shadow: 0px 24px 164px -20px rgba(35,40,105,0.15);"
+        ></div>
+        <div
+                style="width: 865.33px; height: 492px; position: absolute; left: 307.5px; top: 33.5px; border-bottom-right-radius: 10px;"
+        ></div>
+        <img
+                src="dashboard.png"
+                style="width: 1173.33px; height: 493px; position: absolute; left: -0.5px; top: 32.5px; border-bottom-left-radius: 10px; border-bottom-right-radius: 10px; object-fit: cover;"
+        />
+        <svg
+                width="44"
+                height="10"
+                viewBox="0 0 44 10"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                style="width: 44px; height: 10px;"
+                preserveAspectRatio="none"
+        >
+          <circle cx="5" cy="5" r="5" fill="#FF4444"></circle>
+          <circle cx="22" cy="5" r="5" fill="#FDB241"></circle>
+          <circle cx="39" cy="5" r="5" fill="#65D81F"></circle>
+        </svg>
+      </div>
+      <svg
+              width="1173"
+              height="1"
+              viewBox="0 0 1173 1"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              style="position: absolute; left: 0.83px; top: 33.5px;"
+              preserveAspectRatio="xMidYMid meet"
+      >
+        <line x1="0.333344" y1="0.5" x2="1172.33" y2="0.5" stroke="#E4E4E7"></line>
+      </svg>
+    </div>
+    <svg
+            width="542"
+            height="542"
+            viewBox="0 0 542 542"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            style="width: 222px; height: 222px;"
+            preserveAspectRatio="none"
+    >
+      <g filter="url(#filter0_f_1_380)">
+        <circle cx="271" cy="271" r="111" fill="#C3E9E6"></circle>
+      </g>
+      <g filter="url(#filter1_bd_1_380)">
+        <circle
+                cx="271"
+                cy="271"
+                r="60"
+                fill="white"
+                fill-opacity="0.7"
+                shape-rendering="crispEdges"
+        ></circle>
+      </g>
+      <path
+              d="M269.43 281.551C268.109 282.517 266.25 281.573 266.25 279.936V261.689C266.25 260.052 268.109 259.108 269.43 260.074L281.915 269.198C283.009 269.997 283.009 271.628 281.915 272.427L269.43 281.551Z"
+              fill="#18181B"
+      ></path>
+      <defs>
+        <filter
+                id="filter0_f_1_380"
+                x="0"
+                y="0"
+                width="542"
+                height="542"
+                filterUnits="userSpaceOnUse"
+                color-interpolation-filters="sRGB"
+        >
+          <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
+          <feBlend
+                  mode="normal"
+                  in="SourceGraphic"
+                  in2="BackgroundImageFix"
+                  result="shape"
+          ></feBlend>
+          <feGaussianBlur
+                  stdDeviation="80"
+                  result="effect1_foregroundBlur_1_380"
+          ></feGaussianBlur>
+        </filter>
+        <filter
+                id="filter1_bd_1_380"
+                x="57"
+                y="81"
+                width="428"
+                height="428"
+                filterUnits="userSpaceOnUse"
+                color-interpolation-filters="sRGB"
+        >
+          <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
+          <feGaussianBlur in="BackgroundImageFix" stdDeviation="7"></feGaussianBlur>
+          <feComposite
+                  in2="SourceAlpha"
+                  operator="in"
+                  result="effect1_backgroundBlur_1_380"
+          ></feComposite>
+          <feColorMatrix
+                  in="SourceAlpha"
+                  type="matrix"
+                  values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                  result="hardAlpha"
+          ></feColorMatrix>
+          <feOffset dy="24"></feOffset>
+          <feGaussianBlur stdDeviation="77"></feGaussianBlur>
+          <feComposite in2="hardAlpha" operator="out"></feComposite>
+          <feColorMatrix
+                  type="matrix"
+                  values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
+          ></feColorMatrix>
+          <feBlend
+                  mode="normal"
+                  in2="effect1_backgroundBlur_1_380"
+                  result="effect2_dropShadow_1_380"
+          ></feBlend>
+          <feBlend
+                  mode="normal"
+                  in="SourceGraphic"
+                  in2="effect2_dropShadow_1_380"
+                  result="shape"
+          ></feBlend>
+        </filter>
+      </defs>
+    </svg>
+  </div>
+  <div style="width: 103px; height: 30px; position: absolute; left: 72px; top: 26px;">
+    <p style="position: absolute; left: 0px; top: 0px; font-size: 24px; font-weight: 700; text-align: left; text-transform: uppercase; color: #18181b;">
+      Sentıe
+    </p>
+  </div>
+  <div style="width: 189px; height: 24px;">
+    <div style="width: 68px; height: 24px; position: absolute; left: 865px; top: 29px;">
+      <p style="position: absolute; left: 0px; top: 0px; font-size: 16px; font-weight: 500; text-align: left; color: #18181b;">
+        Features
+      </p>
+    </div>
+    <div style="width: 70px; height: 24px; position: absolute; left: 984px; top: 29px;">
+      <p style="position: absolute; left: 0px; top: 0px; font-size: 16px; font-weight: 500; text-align: left; color: #18181b;">
+        About Us
+      </p>
+    </div>
+  </div>
+  <div
+          style="display: flex; justify-content: flex-start; align-items: center; position: absolute; left: 1576px; top: 19px; gap: 44px;">
+
+    <div
+            style="display: flex; flex-direction: column; justify-content: flex-start; align-items: flex-start; flex-grow: 0; flex-shrink: 0;">
+      <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; flex-grow: 0; flex-shrink: 0; height: 45px; width: 114px; gap: 10px; padding: 16px; border-radius: 10px; background: #b6efec;">
+        <div style="display: flex; justify-content: center; align-items: center; flex-grow: 0; flex-shrink: 0; position: relative; gap: 9px; ">
+          <form id="myForm" action="analyze" method="POST" th:object="${loginRequest}">
+            <input  style="cursor: pointer; padding: 9px 32px" type="submit" name="logoutButton" value="Analyse">
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

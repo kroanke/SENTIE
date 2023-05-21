@@ -29,6 +29,9 @@ public class User implements UserDetails {
     @JsonIgnore
     @NonNull
     private String password;
+
+    private String createdAt;
+
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         return Collections.EMPTY_LIST;
