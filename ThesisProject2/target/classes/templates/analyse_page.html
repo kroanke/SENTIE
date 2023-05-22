@@ -43,6 +43,7 @@ textarea {
   <script th:src="@{/sentimentAnalysisDirectToResult.js}" type="text/javascript"></script>
   <script th:src="@{/clear.js}" type="text/javascript"></script>
   <script th:src="@{/uploadFile.js}" type="text/javascript"></script>
+  <script th:src="@{/chartDirectToResult.js}" type="text/javascript"></script>
 </head>
 <body>
 <form id="myForm" action="/result" method="POST" th:object="${loginRequest}">
@@ -50,7 +51,7 @@ textarea {
     <div style="width: 1920px; height: 855px; position: absolute; left: -1px; top: -1px; background: #f6f5f3;"></div>
     <div style="width: 103px; height: 30px; position: absolute; left: 72px; top: 26px;">
       <p style="position: absolute; left: 0px; top: 0px; font-size: 24px; font-weight: 700; text-align: left; text-transform: uppercase; color: #18181b;">
-        <a href="indexLoggedIN.html">SENTIE</a>
+        <a href="indexLoggedIN.html"><u>SENTIE</u></a>
       </p>
     </div>
     <div style="width: 189px; height: 24px;">
@@ -74,7 +75,7 @@ textarea {
       <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; width: 561px; height: 783px; position: absolute; left: 679px; top: 149px; gap: 10px; padding: 16px; border-radius: 10px; background: #bcd2d1;">
         <div style="display: flex; justify-content: center; align-items: center; flex-grow: 0; flex-shrink: 0; width: 125px; height: 24px; gap: 9px;"></div>
       </div>
-      <textarea style="background-color: transparent ;width: 541px; height: 689px; position: absolute; left: 690px; top: 157px; font-size: 18px; font-weight: 700; text-align: left; color: #000;" spellcheck="false" id="text-input" placeholder="ANALIZLEMEK ISTEDIGIN DOSYAYI SURUKLE"></textarea>
+      <textarea style="background-color: transparent ;width: 541px; height: 689px; position: absolute; left: 690px; top: 157px; font-size: 18px; font-weight: 700; text-align: left; color: #000;" spellcheck="false" id="text-input" placeholder="Upload a file or Insert a text"></textarea>
     </div>
 
     <div style="width: 561px; height: 77px;">
@@ -128,7 +129,7 @@ textarea {
           <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; width: 114px; height: 45px; position: absolute; left: 0px; top: 0px; gap: 10px; padding: 16px; border-radius: 10px; background: #b6efec;">
             <div style="display: flex; justify-content: center; align-items: center; flex-grow: 0; flex-shrink: 0; position: relative; gap: 9px;">
               <p style="flex-grow: 0; flex-shrink: 0; font-size: 18px; font-weight: 700; text-align: right; color: #5D6263;">
-                <button style="padding: 9px 25px" type="button" th:onclick="analyzeSentiment()" id="analyze-button">Analyze</button>
+                <button style="padding: 9px 25px" type="button" th:onclick="analyzeSentiment();" id="analyze-button">Analyze</button>
               </p>
             </div>
           </div>

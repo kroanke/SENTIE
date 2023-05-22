@@ -12,7 +12,8 @@ function analyzeSentiment() {
       var myArray = [];
       var input_text = document.getElementById("text-input").value; // Get the text from the textarea
       console.log("utku");
-
+      var positiveCount;
+      var negativeCount;
       if(input_text.trim() === ""){
 alert("Input is empty");
       }
@@ -39,10 +40,12 @@ alert("Input is empty");
               sentence = sentiment;
 
               positiveWords = sentence.match(/Positive words: ([\w, ]+)/)[1].split(', ');
-
+              var positiveString = positiveWords + '';
+              positiveCount = positiveString.split(',').map(word => word.trim()).length;
 
               negativeWords = sentence.split(":")[3].split(".")[0].trim();
-
+              var negativeString = negativeWords + '';
+              negativeCount = negativeString.split(',').map(word => word.trim()).length;
               console.log("Negative words: " + negativeWords);
               const sentimentRegex = /Overall sentiment: (\w+)/;
               const sentimentRegex2 = /Overall sentiment value: (\w+)/;
@@ -69,6 +72,8 @@ alert("Input is empty");
                     localStorage.setItem('negativeWords', negativeWords);
                     localStorage.setItem('sentiment', sentiment);
                     localStorage.setItem('sentence', sentence);
+                    localStorage.setItem('positiveCount', positiveCount);
+                    localStorage.setItem('negativeCount', negativeCount);
                 document.getElementById('myForm').submit();
               }, 3500);
       }

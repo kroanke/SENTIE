@@ -7,7 +7,9 @@ const analyzeButton = document.getElementById('analyze-button');
 function analyzeSentiment() {
   var sentiment;
   var positiveWords;
+  var positiveCount;
   var negativeWords;
+  var negativeCount;
   var sentence;
   var input_text = document.getElementById("text-input").value; // Get the text from the textarea
   // Make an HTTP POST request to the Sentiment Analysis API endpoint
@@ -37,12 +39,19 @@ function analyzeSentiment() {
         sentence = sentiment;
 
         positiveWords = sentence.match(/Positive words: ([\w, ]+)/)[1].split(', ');
+        var positiveString = positiveWords + '';
+        positiveCount = positiveString.split(',').map(word => word.trim()).length;
+        console.log(positiveCount);
         document.getElementById("positiveWords").value = positiveWords;
         console.log("Positive words: " + positiveWords);
 
 
+
         negativeWords = sentence.split(":")[3].split(".")[0].trim();
+
         document.getElementById("negative").value = negativeWords;
+        var negativeString = negativeWords + '';
+        negativeCount = negativeString.split(',').map(word => word.trim()).length;
         console.log("Negative words: " + negativeWords);
 
         const sentimentRegex = /Overall sentiment: (\w+)/;
@@ -63,6 +72,8 @@ function analyzeSentiment() {
         console.error(error);
       });
     }
+    localStorage.setItem('positiveCount', positiveCount);
+    localStorage.setItem('negativeCount', negativeCount);
 
 
 

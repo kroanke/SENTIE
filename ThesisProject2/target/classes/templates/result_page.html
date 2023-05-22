@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Preview</title>
     <script src="https://cdn.tailwindcss.com"></script>
+
     <style>
       html, body {
         display: flex;
@@ -40,6 +41,7 @@
     <script th:src="@{/clear.js}" type="text/javascript"></script>
     <script th:src="@{/sentimentAnalysis.js}" type="text/javascript"></script>
     <script th:src="@{/uploadFile.js}" type="text/javascript"></script>
+    <script th:src="@{/chart.js}" type="text/javascript"></script>
 </head>
 <body>
 <div
@@ -127,7 +129,7 @@
                 style="position: absolute; left: 0px; top: 0px; font-size: 24px; font-weight: 700; text-align: left; text-transform: uppercase; color: #18181b;"
         >
         <p style="position: absolute; left: 0px; top: 0px; font-size: 24px; font-weight: 700; text-align: left; text-transform: uppercase; color: #18181b;">
-            <a href="indexLoggedIN.html">SENTIE</a>
+            <a href="indexLoggedIN.html"><u>SENTIE</u></a>
         </p>
         </p>
     </div>
@@ -197,9 +199,8 @@
         <div
                 style="display: flex; flex-direction: column; justify-content: center; align-items: center; width: 439px; height: 507px; position: absolute; left: 1350px; top: 244px; gap: 10px; padding: 16px; border-radius: 10px; background: #fff;"
         >
-            <div
-                    style="display: flex; justify-content: center; align-items: center; flex-grow: 0; flex-shrink: 0; width: 125px; height: 24px; gap: 9px;"
-            ></div>
+            <div id="chartContainer" style="height: 370px; width: 100%; opacity: 0;"></div>
+            <script src="https://cdn.canvasjs.com/canvasjs.min.js"></script>
         </div>
     </div>
     <textarea disabled
@@ -307,7 +308,7 @@
                 <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; width: 114px; height: 45px; position: absolute; left: 0px; top: 0px; gap: 10px; padding: 16px; border-radius: 10px; background: #b6efec;">
                     <div style="display: flex; justify-content: center; align-items: center; flex-grow: 0; flex-shrink: 0; position: relative; gap: 9px;">
                         <p style="flex-grow: 0; flex-shrink: 0; font-size: 18px; font-weight: 700; text-align: right; color: #5D6263;">
-                            <button style="padding: 9px 25px" type="button" th:onclick="analyzeSentiment()" id="analyze-button">Analyze</button>
+                            <button style="padding: 9px 25px" type="button" th:onclick="analyzeSentiment(); showChart();" id="analyze-button">Analyze</button>
                         </p>
                     </div>
                 </div>
